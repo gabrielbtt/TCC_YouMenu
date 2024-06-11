@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" styleClass="background" stylesheets="@../css/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="youmenu.TelaLoginFuncionarioController">
+    <children>
+      <ImageView fitHeight="600.0" fitWidth="335.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/Chefe%20tela%20inicial.png" />
+         </image>
+      </ImageView>
+      <VBox alignment="CENTER" prefHeight="50.0" prefWidth="335.0">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="40.0" prefWidth="300.0" styleClass="cabecalho" text="Bem vindo" />
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="20.0" layoutY="150.0" prefHeight="250.0" prefWidth="300.0">
+         <children>
+            <TextField fx:id="txtEmail" alignment="TOP_LEFT" prefWidth="300.0" promptText="Nome">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="txtSenha" alignment="TOP_LEFT" minWidth="100.0" prefWidth="100.0" promptText="Senha">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></TextField>
+         </children></VBox>
+      <VBox alignment="CENTER" layoutX="14.0" layoutY="486.0" prefHeight="100.0" prefWidth="307.0">
+         <children>
+            <Button fx:id="btnEntrar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#btnEntrar" prefHeight="20.0" prefWidth="230.0" styleClass="button1" text="Entrar">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

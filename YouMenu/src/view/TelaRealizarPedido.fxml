@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="335.0" stylesheets="@../css/css.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="youmenu.TelaRealizarPedidoController">
+   <children>
+      <VBox layoutX="13.0" layoutY="9.0" prefHeight="48.0" prefWidth="310.0">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="38.0" prefWidth="310.0" styleClass="GridPane">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="59.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="251.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <ImageView fx:id="btnVoltar" fitHeight="26.0" fitWidth="27.0" onMouseClicked="#btnVoltarClicked" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/icon_seta.png" />
+                     </image>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" styleClass="label1" text="Faça seu pedido" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <opaqueInsets>
+                        <Insets left="30.0" />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets left="30.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="12.0" layoutY="580.0" prefHeight="62.0" prefWidth="310.0">
+         <children>
+            <Button fx:id="btnContinuar" mnemonicParsing="false" onAction="#btnContinuar" prefWidth="230.0" text="Continuar">
+               <VBox.margin>
+                  <Insets bottom="6.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <HBox layoutY="62.0" prefHeight="77.0" prefWidth="335.0">
+         <children>
+            <ImageView fx:id="btnCategoriaPizza" fitHeight="62.0" fitWidth="105.0" onMouseClicked="#btnCategoriaPizzaClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/pizza.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" right="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="btnCategoriaPorcao" fitHeight="64.0" fitWidth="120.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#btnCategoriaPorcaoClicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/porcao.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" right="10.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox layoutY="137.0" prefHeight="92.0" prefWidth="335.0">
+         <children>
+            <ImageView fx:id="btnCategoriaSanduiche" fitHeight="77.0" fitWidth="91.0" onMouseClicked="#btnCategoriaSanduicheClicked" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/hamburguer.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="40.0" right="15.0" />
+               </HBox.margin>
+            </ImageView>
+            <ImageView fx:id="btnCategoriaBebida" fitHeight="77.0" fitWidth="101.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#btnCategoriaBebidaClicked" pickOnBounds="true">
+               <image>
+                  <Image url="@../resources/refrigerante.jpg" />
+               </image>
+               <HBox.margin>
+                  <Insets left="39.0" right="15.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+      </HBox>
+      <TableView fx:id="tblProdutos" layoutY="221.0" prefHeight="133.0" prefWidth="335.0">
+        <columns>
+          <TableColumn fx:id="clnCodigo" prefWidth="60.0" text="Código" />
+          <TableColumn fx:id="clnNomeProduto" prefWidth="203.0" text="Nome" />
+            <TableColumn fx:id="clnPrecoProduto" prefWidth="71.0" text="Preço" />
+        </columns>
+      </TableView>
+      <HBox alignment="CENTER_LEFT" layoutY="354.0" prefHeight="70.0" prefWidth="335.0">
+         <children>
+            <GridPane prefHeight="57.0" prefWidth="335.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="134.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="94.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="107.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="28.0" prefWidth="133.0" styleClass="label2" text="Quantidade">
+                     <font>
+                        <Font size="5.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAdicionar" mnemonicParsing="false" onAction="#btnAdicionar" text="Adicionar" GridPane.columnIndex="2" />
+                  <Spinner fx:id="spinQuantidade" editable="true" prefHeight="32.0" prefWidth="65.0" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <HBox layoutY="457.0" prefHeight="117.0" prefWidth="335.0">
+         <children>
+            <ListView fx:id="lvResumo" prefHeight="117.0" prefWidth="338.0" />
+         </children>
+      </HBox>
+      <Label layoutX="52.0" layoutY="432.0" prefHeight="28.0" prefWidth="230.0" styleClass="label2" text="RESUMO DO PEDIDO" />
+   </children> 
+</AnchorPane>
